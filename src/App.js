@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
 import Nav from './components/Nav';
-import BusinessList from './components/BusinessList';
-import BusinessDetails from './components/BusinessDetails';
+import Router from './Router';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <BusinessList />
-      <BusinessDetails />
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Nav />
+        <Router />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
