@@ -1,10 +1,18 @@
 import React from 'react';
 
 const Listings = (props) => {
-  console.log(props)
   return (
     <div>
-      <h1>Listings, here.</h1>
+      {props.businesses.map((business, index) => {
+        return (
+          <div key={index}>
+            <h1>{business.Name}</h1>
+            <h3>{business.Description}</h3>
+            <h5>{business.Address}</h5>
+            <h5>{business.Hours}</h5>
+          </div>
+        )
+      })}
     </div>
   )
 }
