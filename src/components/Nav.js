@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <AppBar position="static" >
       <Toolbar style={{width: "100%", justifyContent: "space-between",}}>
@@ -16,6 +16,9 @@ const Nav = () => {
           <Link to="/login">
             <li>Login</li>
           </Link>
+          {props.loggedIn &&
+            <li>Heyoo</li>
+          }
         </ul>
       </Toolbar>
     </AppBar>

@@ -8,7 +8,6 @@ class Login extends React.Component {
   }
 
   handleTextChange = (event) => {
-    console.log(event.target.value);
     const state = { ...this.state };
     state[event.target.name] = event.target.value;
     this.setState(state);
@@ -16,14 +15,15 @@ class Login extends React.Component {
 
   login = (event) => {
     event.preventDefault();
-    document.cookie = "loggedIn=true;max-age=60*1000";
-    window.location.replace("/listings");
+    document.cookie = "loggedIn=true;max-age=60*1000*5";
+    window.location.replace("/");
+    this.props.handleLogin();
   }
 
   render() {
     return (
       <div style={{width: "100%", textAlign: "center", paddingTop: "45px"}}>
-        <form action="" onSubmit={this.login}>
+        <form action="" onSubmit={(event) => this.login(event)}>
           <Input
             required
             placeholder="username"
@@ -39,6 +39,7 @@ class Login extends React.Component {
             onChange={this.handleTextChange}
             value={this.state.password}
             name="password"
+            type="password"
             >
           </Input>
           <br />

@@ -7,6 +7,7 @@ import Login from './components/Login';
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
+  console.log(cookies);
   return cookies["loggedIn"] ? true : false;
 }
 
@@ -14,21 +15,19 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
     {...rest}
-    render={
-      (props) => checkAuth()
+    render={(props) => checkAuth()
       ? <Component {...props} />
-      : <Redirect to="/login" />
-    }
+      : <Redirect to="/login" />}
      />
   )
 }
 
-const Router = () => {
+const Router = (props) => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/listings" component={Listings} />
-      <Route path="/login" component={Login} />
+      <Route path="/listings" render={() => <Listings {...props} />} />
+      <Route path="/login" render={() => <Login {...props} />} />
     </Switch>
   )
 }

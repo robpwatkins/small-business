@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Listings = (props) => {
+  console.log('Listings: ', props.isLoggedIn);
   return (
     <div>
       {props.businesses.map((business, index) => {
