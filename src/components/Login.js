@@ -16,8 +16,7 @@ class Login extends React.Component {
   login = (event) => {
     event.preventDefault();
     document.cookie = "loggedIn=true;max-age=60*1000*5";
-    window.location.replace("/");
-    this.props.handleLogin();
+    window.location.replace("/listings");
   }
 
   render() {

@@ -1,5 +1,4 @@
 export default {
-  isLoggedIn: false,
   businesses: [
     {
       "id": 1,

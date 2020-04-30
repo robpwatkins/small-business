@@ -3,6 +3,7 @@ import { AppBar, Toolbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const Nav = (props) => {
+
   return (
     <AppBar position="static" >
       <Toolbar style={{width: "100%", justifyContent: "space-between",}}>
@@ -13,12 +14,23 @@ const Nav = (props) => {
           <Link to="/listings">
             <li>Listings</li>
           </Link>
-          <Link to="/login">
-            <li>Login</li>
-          </Link>
           {props.loggedIn &&
-            <li>Heyoo</li>
+            <Link to="/add">
+              <li>Add</li>
+            </Link>
           }
+          {props.loggedIn ? (
+            <Link to="/">
+              <li onClick={() => {
+                document.cookie = "loggedIn=false";
+                props.handleLogout();
+              }}>Logout</li>
+            </Link>
+          ):(
+            <Link to="/login">
+              <li>Login</li>
+            </Link>
+            )}
         </ul>
       </Toolbar>
     </AppBar>
