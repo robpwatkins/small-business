@@ -22,7 +22,7 @@ class Login extends React.Component {
   render() {
     return (
       <div style={{width: "100%", textAlign: "center", paddingTop: "45px"}}>
-        <form action="" onSubmit={(event) => this.login(event)}>
+        <form action="" onSubmit={this.login}>
           <Input
             required
             placeholder="username"
