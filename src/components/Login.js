@@ -1,11 +1,58 @@
 import React from 'react';
+import { Input, Button } from '@material-ui/core';
 
-const Login = () => {
-  return (
-    <div>
-      <h1>Login, here.</h1>
-    </div>
-  )
+class Login extends React.Component {
+  state = {
+    username: '',
+    password: ''
+  }
+
+  handleTextChange = (event) => {
+    console.log(event.target.value);
+    const state = { ...this.state };
+    state[event.target.name] = event.target.value;
+    this.setState(state);
+  }
+
+  login = (event) => {
+    event.preventDefault();
+    document.cookie = "loggedIn=true;max-age=60*1000";
+    window.location.replace("/listings");
+  }
+
+  render() {
+    return (
+      <div style={{width: "100%", textAlign: "center", paddingTop: "45px"}}>
+        <form action="" onSubmit={this.login}>
+          <Input
+            required
+            placeholder="username"
+            onChange={this.handleTextChange}
+            value={this.state.username}
+            name="username"
+            >
+          </Input>
+          <br />
+          <Input
+            required
+            placeholder="email"
+            onChange={this.handleTextChange}
+            value={this.state.password}
+            name="password"
+            >
+          </Input>
+          <br />
+          <Button 
+            variant="contained"
+            type="submit"
+            style={{marginTop: "15px"}}
+            >
+              login
+          </Button>
+        </form>
+      </div>
+    )
+  }
 }
 
 export default Login;
