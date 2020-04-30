@@ -15,9 +15,7 @@ class App extends React.Component {
   componentDidMount() {
     const cookies = cookie.parse(document.cookie);
     console.log('cookie: ', cookies['loggedIn']);
-    cookies['loggedIn']
-      ? this.setState({ loggedIn: true })
-      : this.setState({ loggedIn: false});
+    this.setState({ loggedIn: cookies['loggedIn'] });
   }
   
   handleLogout = () => {
