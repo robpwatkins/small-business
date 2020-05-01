@@ -13,7 +13,7 @@ class Login extends React.Component {
     this.setState(state);
   }
 
-  login = (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
     document.cookie = "loggedIn=true;max-age=60*1000*5";
     window.location.replace("/listings");
@@ -22,7 +22,7 @@ class Login extends React.Component {
   render() {
     return (
       <div style={{width: "100%", textAlign: "center", paddingTop: "45px"}}>
-        <form action="" onSubmit={this.login}>
+        <form action="" onSubmit={this.handleSubmit}>
           <Input
             required
             placeholder="username"
