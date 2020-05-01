@@ -3,19 +3,40 @@ import { checkAuth } from '../checkAuth';
 import { AppBar, Toolbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
+const toolbarStyle = {
+  width: "100%", 
+  justifyContent: "space-between"
+}
+
+const ulStyle = {
+  display: "flex", 
+  width:"20%", 
+  justifyContent: "space-around", 
+  listStyle: "none"
+}
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "inherit"
+}
+
+const logoutStyle = {
+  cursor: "pointer"
+}
+
 const Nav = () => {
   return (
     <AppBar position="static" >
-      <Toolbar style={{width: "100%", justifyContent: "space-between",}}>
-        <Link to="/">
+      <Toolbar style={toolbarStyle}>
+        <Link to="/" style={linkStyle}>
           <h5>Austin Small Business</h5>
         </Link>
-        <ul style={{display: "flex", width:"20%", justifyContent: "space-around", listStyle: "none"}}>
-          <Link to="/listings">
+        <ul style={ulStyle}>
+          <Link to="/listings" style={linkStyle}>
             <li>Listings</li>
           </Link>
           {checkAuth() &&
-            <Link to="/add">
+            <Link to="/add" style={linkStyle}>
               <li>Add</li>
             </Link>
           }
@@ -24,10 +45,12 @@ const Nav = () => {
               document.cookie = "loggedIn=";
               window.location.replace('/login');
             }}
-            style={{cursor: "pointer"}}
-            >Logout</li>
+              style={logoutStyle}
+              >
+                Logout
+              </li>
           ):(
-            <Link to="/login">
+            <Link style={linkStyle} to="/login">
               <li>Login</li>
             </Link>
             )}
