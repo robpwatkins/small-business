@@ -1,8 +1,6 @@
-// replace that //
-
-export const logIn = () => {
+export const removeBusiness = (index) => {
   return {
-    type: LOG_IN,
-    value: true
+    type: 'REMOVE_BUSINESS',
+    value: index
   }
 }

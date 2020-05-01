@@ -46,6 +46,7 @@ const Listings = (props) => {
                 {checkAuth() &&
                   <TableCell style={iconCellStyle}>
                     <DeleteIcon 
+                      onClick={() => props.removeBusiness(index)}
                       color="secondary" 
                       style={deleteStyle}
                       />
