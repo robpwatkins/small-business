@@ -41,16 +41,16 @@ const Nav = () => {
             </Link>
           }
           {checkAuth() ? (
-            <li onClick={() => {
-              document.cookie = "loggedIn=";
-              window.location.replace('/login');
-            }}
+            <li 
+              onClick={() => {
+                document.cookie = "loggedIn=";
+                window.location.replace('/');
+              }}
               style={logoutStyle}
-              >
-                Logout
-              </li>
+              >Logout
+            </li>
           ):(
-            <Link style={linkStyle} to="/login">
+            <Link to="/login" style={linkStyle}>
               <li>Login</li>
             </Link>
             )}

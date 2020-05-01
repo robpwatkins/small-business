@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import { Input, Button } from '@material-ui/core';
 
+const divStyle = {
+  width: "100%", 
+  textAlign: "center", 
+  paddingTop: "45px"
+}
+
+const buttonStyle = {
+  marginTop: "15px"
+}
+
 class Login extends Component {
   state = {
     username: '',
     password: ''
   }
+
 
   handleTextChange = (event) => {
     const state = { ...this.state };
@@ -21,7 +32,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div style={{width: "100%", textAlign: "center", paddingTop: "45px"}}>
+      <div style={divStyle}>
         <form action="" onSubmit={this.handleSubmit}>
           <Input
             required
@@ -45,9 +56,8 @@ class Login extends Component {
           <Button 
             type="submit"
             variant="contained"
-            style={{marginTop: "15px"}}
-            >
-              login
+            style={buttonStyle}
+            >login
           </Button>
         </form>
       </div>

@@ -68,7 +68,7 @@ class Add extends Component {
             value={this.state.hours}
             name="hours" 
             fullWidth
-            />
+          />
           <br />
           <Input 
             placeholder="Description"
@@ -83,8 +83,7 @@ class Add extends Component {
             variant="contained" 
             color="primary"
             style={buttonStyle}
-          >
-            SAVE
+            >SAVE
           </Button>
         </form>
       </Container>

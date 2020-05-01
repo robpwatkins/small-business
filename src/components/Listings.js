@@ -12,6 +12,10 @@ const deleteStyle = {
   cursor: "pointer"
 }
 
+const iconCellStyle = {
+  textAlign: "center"
+}
+
 const Listings = (props) => {
   return (
 		<Container>
@@ -40,7 +44,7 @@ const Listings = (props) => {
                 <TableCell>{business.Hours}</TableCell>
                 <TableCell>{business.Address}</TableCell>
                 {checkAuth() &&
-                  <TableCell>
+                  <TableCell style={iconCellStyle}>
                     <DeleteIcon 
                       color="secondary" 
                       style={deleteStyle}

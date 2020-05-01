@@ -1,8 +1,13 @@
 import React from 'react';
 
+const divStyle = {
+  textAlign: "center", 
+  paddingTop: "45px"
+}
+
 const Home = () => {
   return (
-    <div style={{textAlign: "center", paddingTop: "45px"}}>
+    <div style={divStyle}>
       <h1>Austin Small Business</h1>
     </div>
   )
