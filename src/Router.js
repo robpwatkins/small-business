@@ -4,7 +4,7 @@ import { Switch, Route /* Redirect */ } from 'react-router';
 import Home from './components/Home';
 import Listings from './containers/Listings';
 import Login from './components/Login';
-import Details from './components/Details';
+import Details from './containers/Details';
 
 // const checkAuth = () => {
 //   const cookies = cookie.parse(document.cookie);
@@ -26,9 +26,9 @@ const Router = (props) => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/listings" render={() => <Listings {...props} />} />
-      <Route path="/login" render={() => <Login {...props} />} />
-      <Route path="/details" component={Details} />
+      <Route path="/listings" component={Listings} />
+      <Route path="/login" component={Login} />
+      <Route path="/details/:id" component={Details} />
     </Switch>
   )
 }

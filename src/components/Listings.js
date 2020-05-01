@@ -9,7 +9,7 @@ const Listings = (props) => {
       {props.businesses.map((business, index) => {
         return (
           <div key={index}>
-            <Link to="/details">
+            <Link to={`/details/${business.id}`}>
               <h1>{business.Name}</h1>
             </Link>
             <h3>{business.Description}</h3>
