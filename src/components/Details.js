@@ -4,7 +4,7 @@ import { Container } from '@material-ui/core';
 const containerStyle = {
   display: "flex",
   width: "100%",
-  height: "20vh",
+  height: "200px",
   justifyContent: "center",
   alignItems: "center",
   marginTop: "25px",
@@ -14,6 +14,7 @@ const divStyle = {
   display: "flex",
   flexDirection: "column",
   height: "100%",
+  width: "50%",
   justifyContent: "space-between"
 }
 
