@@ -2,22 +2,14 @@ import React, { Component } from 'react';
 import { Input, Button, Container } from '@material-ui/core';
 
 const containerStyle = {
-  display: "flex",
-  flexDirection: "column",
-  width: "100%",
-  alignItems: "center",
+  width: "500px",
   paddingTop: "45px"
 }
 
 const buttonStyle = {
-  marginTop: "25px",
-  width: "250px"
+  marginTop: "15px",
+  width: "225px"
 }
-
-const formStyle = {
-  width: "500px"
-}
-
 
 class Add extends Component {
   state = {
@@ -53,7 +45,7 @@ class Add extends Component {
   render() {
     return (
       <Container style={containerStyle}>
-        <form action="" onSubmit={this.handleSubmit} style={formStyle}>
+        <form action="" onSubmit={this.handleSubmit}>
           <Input 
             placeholder="Name"
             onChange={this.handleTextChange}
