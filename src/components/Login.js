@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Input, Button } from '@material-ui/core';
 
-class Login extends React.Component {
+class Login extends Component {
   state = {
     username: '',
     password: ''
@@ -43,8 +43,8 @@ class Login extends React.Component {
           </Input>
           <br />
           <Button 
-            variant="contained"
             type="submit"
+            variant="contained"
             style={{marginTop: "15px"}}
             >
               login
