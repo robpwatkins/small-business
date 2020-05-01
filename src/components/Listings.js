@@ -16,7 +16,7 @@ const Listings = (props) => {
             <h5>{business.Address}</h5>
             <h5>{business.Hours}</h5>
             {checkAuth() &&
-            <button>DELETE</button>
+            <button onClick={() => console.log('heyoo')}>DELETE</button>
             }
           </div>
         )
