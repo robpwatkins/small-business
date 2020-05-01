@@ -1,16 +1,11 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router';
-import cookie from 'cookie';
+import { checkAuth } from './checkAuth';
 import Home from './components/Home';
 import Listings from './containers/Listings';
 import Login from './components/Login';
 import Details from './containers/Details';
 import Add from './components/Add';
-
-const checkAuth = () => {
-  const cookies = cookie.parse(document.cookie);
-  return cookies["loggedIn"] ? true : false;
-}
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
@@ -23,7 +18,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
   )
 }
 
-const Router = (props) => {
+const Router = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
