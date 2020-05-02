@@ -13,10 +13,10 @@ const buttonStyle = {
 
 class Add extends Component {
   state = {
-    name: '',
-    address: '', 
-    hours: '',
-    description: ''
+    Name: '',
+    Address: '', 
+    Hours: '',
+    Description: ''
   }
 
   handleTextChange = (event) => {
@@ -28,17 +28,19 @@ class Add extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      name: this.state.name,
-      address: this.state.address,
-      hours: this.state.hours,
-      description: this.state.description
+      Name: this.state.Name,
+      Address: this.state.Address,
+      Hours: this.state.Hours,
+      Description: this.state.Description
     })
-    console.log(this.state);
+    const newBusiness = this.state;
+    this.props.addBusiness(newBusiness);
+    this.props.history.push('/listings');
     this.setState({
-      name: '',
-      address: '', 
-      hours: '',
-      description: ''
+      Name: '',
+      Address: '', 
+      Hours: '',
+      Description: ''
     })
   }
 
@@ -49,32 +51,32 @@ class Add extends Component {
           <Input 
             placeholder="Name"
             onChange={this.handleTextChange}
-            value={this.state.name}
-            name="name"
+            value={this.state.Name}
+            name="Name"
             fullWidth
           />
           <br />
           <Input 
             placeholder="Address"
             onChange={this.handleTextChange}
-            value={this.state.address}
-            name="address" 
+            value={this.state.Address}
+            name="Address" 
             fullWidth
           />
           <br />
           <Input 
             placeholder="Hours(ex. 8AM - 9PM)"
             onChange={this.handleTextChange}
-            value={this.state.hours}
-            name="hours" 
+            value={this.state.Hours}
+            name="Hours" 
             fullWidth
           />
           <br />
           <Input 
             placeholder="Description"
             onChange={this.handleTextChange}
-            value={this.state.description}
-            name="description" 
+            value={this.state.Description}
+            name="Description" 
             fullWidth
           />
           <br />

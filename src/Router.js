@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Listings from './containers/Listings';
 import Login from './components/Login';
 import Details from './containers/Details';
-import Add from './components/Add';
+import Add from './containers/Add';
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
