@@ -19,7 +19,6 @@ const iconCellStyle = {
 const Listings = (props) => {
   return (
 		<Container>
-      <h1>Welcome, {props.user}!</h1>
       <Table>
 				<TableHead>
 					<TableRow>

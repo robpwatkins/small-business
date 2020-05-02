@@ -24,39 +24,55 @@ const logoutStyle = {
   cursor: "pointer"
 }
 
-const Nav = () => {
+const userBarStyle = {
+  width: "100%", 
+  height: "21px",
+  paddingLeft: "25px",
+  lineHeight: "21px",
+  fontSize: "13px",
+  color: "grey",
+  background: "lightgrey"
+}
+
+const Nav = (props) => {
+  console.log(props);
   return (
-    <AppBar position="static" >
-      <Toolbar style={toolbarStyle}>
-        <Link to="/" style={linkStyle}>
-          <h5>Austin Small Business</h5>
-        </Link>
-        <ul style={ulStyle}>
-          <Link to="/listings" style={linkStyle}>
-            <li>Listings</li>
+    <React.Fragment>
+      <AppBar position="static" >
+        <Toolbar style={toolbarStyle}>
+          <Link to="/" style={linkStyle}>
+            <h5>Austin Small Business</h5>
           </Link>
-          {checkAuth() &&
-            <Link to="/add" style={linkStyle}>
-              <li>Add</li>
+          <ul style={ulStyle}>
+            <Link to="/listings" style={linkStyle}>
+              <li>Listings</li>
             </Link>
-          }
-          {checkAuth() ? (
-            <li 
-              onClick={() => {
-                document.cookie = "loggedIn=";
-                window.location.replace('/');
-              }}
-              style={logoutStyle}
-              >Logout
-            </li>
-          ):(
-            <Link to="/login" style={linkStyle}>
-              <li>Login</li>
-            </Link>
-            )}
-        </ul>
-      </Toolbar>
-    </AppBar>
+            {checkAuth() &&
+              <Link to="/add" style={linkStyle}>
+                <li>Add</li>
+              </Link>
+            }
+            {checkAuth() ? (
+              <li 
+                onClick={() => {
+                  document.cookie = "loggedIn=";
+                  window.location.replace('/');
+                }}
+                style={logoutStyle}
+                >Logout
+              </li>
+            ):(
+              <Link to="/login" style={linkStyle}>
+                <li>Login</li>
+              </Link>
+              )}
+          </ul>
+        </Toolbar>
+      </AppBar>
+      {checkAuth() &&
+        <div style={userBarStyle}>Logged in as: {props.user}</div>
+      }
+    </React.Fragment>
   )
 }
 
