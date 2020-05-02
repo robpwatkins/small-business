@@ -11,3 +11,10 @@ export const addBusiness = (business) => {
     value: business
   }
 }
+
+export const setUser = (user) => {
+  return {
+    type: 'SET_USER',
+    value: user
+  }
+}

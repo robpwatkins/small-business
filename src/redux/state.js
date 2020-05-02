@@ -1,4 +1,5 @@
 export default {
+  user: '',
   businesses: [
     {
       "id": 1,

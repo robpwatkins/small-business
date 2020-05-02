@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router';
 import { checkAuth } from './checkAuth';
 import Home from './components/Home';
 import Listings from './containers/Listings';
-import Login from './components/Login';
+import Login from './containers/Login';
 import Details from './containers/Details';
 import Add from './containers/Add';
 
