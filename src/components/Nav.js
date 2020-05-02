@@ -35,7 +35,6 @@ const userBarStyle = {
 }
 
 const Nav = (props) => {
-  console.log(props);
   return (
     <React.Fragment>
       <AppBar position="static" >

@@ -1,5 +1,4 @@
 import React from 'react';
-import cookie from 'cookie';
 import { checkAuth } from '../checkAuth';
 import { Link } from 'react-router-dom';
 import { Table, TableHead, TableRow, TableCell, TableBody, Container } from '@material-ui/core';

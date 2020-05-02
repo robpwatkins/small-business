@@ -26,7 +26,7 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    document.cookie = "loggedIn=true";
+    document.cookie = 'loggedIn=true';
     this.props.setUser(this.state.username);
     this.props.history.push("/listings");
   }
