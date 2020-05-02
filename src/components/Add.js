@@ -27,12 +27,6 @@ class Add extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({
-      Name: this.state.name,
-      Address: this.state.address,
-      Hours: this.state.hours,
-      Description: this.state.description
-    })
     const newBusiness = this.state;
     newBusiness.id = this.props.businesses.length;
     this.props.addBusiness(newBusiness);
