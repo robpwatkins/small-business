@@ -13,10 +13,10 @@ const buttonStyle = {
 
 class Add extends Component {
   state = {
-    Name: '',
-    Address: '', 
-    Hours: '',
-    Description: ''
+    name: '',
+    address: '', 
+    hours: '',
+    description: ''
   }
 
   handleTextChange = (event) => {
@@ -28,20 +28,15 @@ class Add extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      Name: this.state.Name,
-      Address: this.state.Address,
-      Hours: this.state.Hours,
-      Description: this.state.Description
+      Name: this.state.name,
+      Address: this.state.address,
+      Hours: this.state.hours,
+      Description: this.state.description
     })
     const newBusiness = this.state;
+    newBusiness.id = this.props.businesses.length;
     this.props.addBusiness(newBusiness);
     this.props.history.push('/listings');
-    this.setState({
-      Name: '',
-      Address: '', 
-      Hours: '',
-      Description: ''
-    })
   }
 
   render() {
@@ -51,32 +46,32 @@ class Add extends Component {
           <Input 
             placeholder="Name"
             onChange={this.handleTextChange}
-            value={this.state.Name}
-            name="Name"
+            value={this.state.name}
+            name="name"
             fullWidth
           />
           <br />
           <Input 
             placeholder="Address"
             onChange={this.handleTextChange}
-            value={this.state.Address}
-            name="Address" 
+            value={this.state.address}
+            name="address" 
             fullWidth
           />
           <br />
           <Input 
             placeholder="Hours(ex. 8AM - 9PM)"
             onChange={this.handleTextChange}
-            value={this.state.Hours}
-            name="Hours" 
+            value={this.state.hours}
+            name="hours" 
             fullWidth
           />
           <br />
           <Input 
             placeholder="Description"
             onChange={this.handleTextChange}
-            value={this.state.Description}
-            name="Description" 
+            value={this.state.description}
+            name="description" 
             fullWidth
           />
           <br />

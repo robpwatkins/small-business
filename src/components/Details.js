@@ -25,10 +25,10 @@ const Details = (props) => {
   return (
     <Container style={containerStyle}>
       <div style={divStyle}>
-        <h1>{business.Name}</h1>
-        <h4>{business.Address}</h4>
-        <h4>{business.Hours}</h4>
-        <p>{business.Description}</p>
+        <h1>{business.name}</h1>
+        <h4>{business.address}</h4>
+        <h4>{business.hours}</h4>
+        <p>{business.description}</p>
       </div>
     </Container>
   )

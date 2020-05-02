@@ -37,12 +37,12 @@ const Listings = (props) => {
               <TableRow key={index}>
                 <TableCell>
                   <Link to={`/details/${business.id}`} style={linkStyle}>
-                    {business.Name}
+                    {business.name}
                   </Link>
                 </TableCell>
-                <TableCell>{business.Description}</TableCell>
-                <TableCell>{business.Hours}</TableCell>
-                <TableCell>{business.Address}</TableCell>
+                <TableCell>{business.description}</TableCell>
+                <TableCell>{business.hours}</TableCell>
+                <TableCell>{business.address}</TableCell>
                 {checkAuth() &&
                   <TableCell style={iconCellStyle}>
                     <DeleteIcon 
