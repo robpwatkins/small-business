@@ -8,16 +8,15 @@ const linkStyle = {
   color: "inherit"
 }
 
-const deleteStyle = {
-  cursor: "pointer"
-}
-
 const iconCellStyle = {
   textAlign: "center"
 }
 
+const deleteStyle = {
+  cursor: "pointer"
+}
+
 const Listings = (props) => {
-  console.log(props.user);
   return (
 		<Container>
       <Table>
