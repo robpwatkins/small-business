@@ -28,7 +28,7 @@ class Add extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const newBusiness = this.state;
-    newBusiness.id = this.props.businesses.length;
+    newBusiness.id = this.props.businesses.length + 1;
     this.props.addBusiness(newBusiness);
     this.props.history.push('/listings');
   }
