@@ -28,7 +28,7 @@ class Login extends Component {
     event.preventDefault();
     document.cookie = 'loggedIn=true';
     this.props.setUser(this.state.username);
-    this.props.history.push("/listings");
+    this.props.history.push('/listings');
   }
 
   render() {
