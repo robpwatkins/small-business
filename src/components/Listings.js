@@ -17,6 +17,7 @@ const deleteStyle = {
 }
 
 const Listings = (props) => {
+  console.log(props);
   return (
 		<Container>
       <Table>

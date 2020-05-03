@@ -4,7 +4,6 @@ import { Container } from '@material-ui/core';
 const containerStyle = {
   display: "flex",
   width: "100%",
-  height: "200px",
   justifyContent: "center",
   alignItems: "center",
   marginTop: "25px",
@@ -13,9 +12,17 @@ const containerStyle = {
 const divStyle = {
   display: "flex",
   flexDirection: "column",
-  height: "100%",
   width: "50%",
-  justifyContent: "space-between"
+}
+
+const imgStyle = {
+  width: "300px",
+  margin: "0 auto",
+  marginBottom: "15px"
+}
+
+const pStyle = {
+  marginTop: "10px"
 }
 
 const Details = (props) => {
@@ -25,10 +32,13 @@ const Details = (props) => {
   return (
     <Container style={containerStyle}>
       <div style={divStyle}>
-        <h1>{business.name}</h1>
-        <h4>{business.address}</h4>
-        <h4>{business.hours}</h4>
-        <p>{business.description}</p>
+        <img src={business.img} alt="" style={imgStyle}/>
+        <div>
+          <h1>{business.name}</h1>
+          <h4>{business.address}</h4>
+          <h4>{business.hours}</h4>
+        </div>
+        <p style={pStyle}>{business.description}</p>
       </div>
     </Container>
   )
