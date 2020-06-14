@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/small-business/static/css/main.d0903e1b.chunk.css",
+    "main.js": "/small-business/static/js/main.4127c9d8.chunk.js",
+    "main.js.map": "/small-business/static/js/main.4127c9d8.chunk.js.map",
+    "runtime-main.js": "/small-business/static/js/runtime-main.82fda6ed.js",
+    "runtime-main.js.map": "/small-business/static/js/runtime-main.82fda6ed.js.map",
+    "static/js/2.1e453519.chunk.js": "/small-business/static/js/2.1e453519.chunk.js",
+    "static/js/2.1e453519.chunk.js.map": "/small-business/static/js/2.1e453519.chunk.js.map",
+    "index.html": "/small-business/index.html",
+    "precache-manifest.9b78b5381bb4234a565cd27c3ed3ed63.js": "/small-business/precache-manifest.9b78b5381bb4234a565cd27c3ed3ed63.js",
+    "service-worker.js": "/small-business/service-worker.js",
+    "static/css/main.d0903e1b.chunk.css.map": "/small-business/static/css/main.d0903e1b.chunk.css.map",
+    "static/js/2.1e453519.chunk.js.LICENSE.txt": "/small-business/static/js/2.1e453519.chunk.js.LICENSE.txt",
+    "static/media/MagnoliaCafe.png": "/small-business/static/media/MagnoliaCafe.115ce94f.png",
+    "static/media/Polvos.jpg": "/small-business/static/media/Polvos.c1b0a396.jpg",
+    "static/media/SpartanPizza.png": "/small-business/static/media/SpartanPizza.f6ab6376.png",
+    "static/media/Tacodeli.png": "/small-business/static/media/Tacodeli.649cf85a.png",
+    "static/media/Torchys.png": "/small-business/static/media/Torchys.b7f1ea27.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82fda6ed.js",
+    "static/js/2.1e453519.chunk.js",
+    "static/css/main.d0903e1b.chunk.css",
+    "static/js/main.4127c9d8.chunk.js"
+  ]
+}
