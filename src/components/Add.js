@@ -18,8 +18,8 @@ const Add = () => {
   const [description, setDescription] = useState('');
 
   const handleTextChange = (event) => {
-    console.log('heyoo');
     [event.target.name] = event.target.value;
+    console.log(name, address, hours, description);
   }
 
   const handleSubmit = (event) => {
@@ -33,7 +33,7 @@ const Add = () => {
 
   return (
     <Container style={containerStyle}>
-      <form action="" onSubmit={this.handleSubmit}>
+      <form action="" onSubmit={handleSubmit}>
         <Input 
           placeholder="Name"
           onChange={handleTextChange}
