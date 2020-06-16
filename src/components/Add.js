@@ -18,8 +18,8 @@ const Add = () => {
   const [description, setDescription] = useState('');
 
   const handleTextChange = (event) => {
-    [event.target.name] = event.target.value;
-    console.log(event.target.value);
+    // [event.target.name] = event.target.value;
+    console.log(event.target.name);
   }
 
   const handleSubmit = (event) => {
