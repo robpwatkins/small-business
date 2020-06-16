@@ -19,7 +19,7 @@ const Add = () => {
 
   const handleTextChange = (event) => {
     [event.target.name] = event.target.value;
-    console.log(name, address, hours, description);
+    console.log(event.target.value);
   }
 
   const handleSubmit = (event) => {
