@@ -12,32 +12,36 @@ const buttonStyle = {
 }
 
 const Add = () => {
-  const [name, setName] = useState('');
-  const [address, setAddress] = useState('');
-  const [hours, setHours] = useState('');
-  const [description, setDescription] = useState('');
+  const [formData, setFormData] = useState([
+    { 
+      name: '', 
+      address: '', 
+      hours: '', 
+      description: '' 
+    }
+  ]);
 
   const handleTextChange = (event) => {
-    // [event.target.name] = event.target.value;
-    console.log(event.target.name);
+    let _tempFormData = [...formData];
+    _tempFormData[event.target.name] = event.target.value;
+    setFormData(_tempFormData);
   }
 
   const handleSubmit = (event) => {
-    console.log('heyoo');
     event.preventDefault();
     const newBusiness = this.state;
     newBusiness.id = this.props.businesses.length + 1;
     this.props.addBusiness(newBusiness);
     this.props.history.push('/listings');
   }
-
+  console.log(formData);
   return (
     <Container style={containerStyle}>
       <form action="" onSubmit={handleSubmit}>
         <Input 
           placeholder="Name"
           onChange={handleTextChange}
-          value={name}
+          value={formData.name || ''}
           name="name"
           fullWidth
         />
@@ -45,7 +49,7 @@ const Add = () => {
         <Input 
           placeholder="Address"
           onChange={handleTextChange}
-          value={address}
+          value={formData.address || ''}
           name="address" 
           fullWidth
         />
@@ -53,7 +57,7 @@ const Add = () => {
         <Input 
           placeholder="Hours(ex. 8AM - 9PM)"
           onChange={handleTextChange}
-          value={hours}
+          value={formData.hours || ''}
           name="hours" 
           fullWidth
         />
@@ -61,7 +65,7 @@ const Add = () => {
         <Input 
           placeholder="Description"
           onChange={handleTextChange}
-          value={description}
+          value={formData.description || ''}
           name="description" 
           fullWidth
         />
