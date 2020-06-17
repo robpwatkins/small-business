@@ -23,8 +23,9 @@ const Add = () => {
 
   const handleTextChange = (event) => {
     let _tempFormData = [...formData];
-    _tempFormData[event.target.name] = event.target.value;
-    setFormData(_tempFormData);
+    _tempFormData[event.target.name] = [_tempFormData, event.target.value];
+    // setFormData(_tempFormData);
+    console.log(_tempFormData);
   }
 
   const handleSubmit = (event) => {
