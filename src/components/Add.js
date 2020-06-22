@@ -12,14 +12,14 @@ const buttonStyle = {
 }
 
 const Add = () => {
-  const [formData, setFormData] = useState([
-    { 
-      name: '', 
-      address: '', 
-      hours: '', 
-      description: '' 
-    }
-  ]);
+  // const [formData, setFormData] = useState([
+  //   { 
+  //     name: '', 
+  //     address: '', 
+  //     hours: '', 
+  //     description: '' 
+  //   }
+  // ]);
 
   const handleTextChange = (event) => {
     setFormData({
